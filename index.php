@@ -42,128 +42,166 @@ if (!empty($_GET['error'])) {
         <meta property="og:url" content="https://www.informatique-notre-avenir.com/fr_fr/informatique/site-web">
 
         <link rel="stylesheet" type="text/css"  href="style.css">
-        <!-- <link rel="stylesheet" href="style1.css">
-        <link rel="stylesheet" href="style3.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="in.css">
-        <link rel="stylesheet" href="nav.css"> -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     </head>
-    <body style="margin-bottom: 0px;" class="bg-black text-white ">
-      <header class="fixed blur">
-        <nav>
-          <ul class="list-none flex justify-between">
-            <li><a href="https://lab2view.com/">Lab2<span class="text-main-color">View</span></a></li>
-            <li>
-              <ul class="list-none flex justify-between">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#">A-propos</a></li>
-                <li><a href="dinoujunior7@gmail.com/ ">Contacter</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </header>
-                  
-<!-- <nav class="nav-bar"> -->
-  <!-- <ul class="nav-links">
-    <li>
-      <span>Accueil </span>
-      <button class="btn-home"><a href="https://lab2view.com/ ">Accéder</a></button>
-    </li>
-    <li>
-      <span>Visite</span>
-      <button class="btn-visita">Découvrir</button>
-    </li>
-    <li>
-      <span>E-mail</span>
-      <button class="btn-email"><a href="dinoujunior7@gmail.com/ ">Contacter</a></button>
-    </li>
-    <li>
-      <span>Qui sommes nous!</span>
-      <button class="btn-chi-siamo">En savoir plus</button>
-    </li>
-    <li>
-      <span>Contactez-nous</span>
-      <button class="btn-contattaci">Nous écrire</button>
-    </li>
-  </ul> -->
-<!-- </nav>
-        <header>
-          <img src="NACI.jpg" alt="Mon NACI" style="width: 200px; height: 200px; float: left; margin: 50px;" /> 
-            <h1 id="header h1" style="margin-top: 120px;">NOTRE AVENIR, C'EST L'INFORMATIQUE.</h1>
-            <span class="entreprise">Lab2view</span>
-            <img src="neyma.jpg"  alt="l'informatique est le futur de notre socièté" title="l'informatique est le futur de notre socièté" id="image-gauche">
-        </header><br>
-        <center> <button class="btn-visita"><i>QUI SOMMES-NOUS !</i></button></center> -->
-        <main id="main" class="items-center justify-center p-3 bg-black text-white mx-auto w-75">
-            <section style="text-align: start;">
-              <h1 id="header h1" class="mb-1 font-bold shadow text-main-color">NOTRE AVENIR, C'EST L'INFORMATIQUE.</h1>
-                <p>L'informatique est le fufixed tur de notre socièté.Découvrez comment elle peut améliorer notre vie quotidienne.
-                  "Lab2View est situé à Douala, Cameroun, depuis 2019. Notre siège social est implanté dans le quartier dynamique de Bonamoussadi, à proximité immédiate de l'hôtel Serena. Cette localisation stratégique nous permet d'être facilement accessibles pour nos clients et partenaires, tout en étant au cœur de l'activité économique de la ville."
-                </p>
-            </section>
-            <div class="p-3 flex flex-end">
-              <img src="image2.png" alt="">
+    <body style="margin-bottom: 0px;" >
+      <main class="main relative">
+        <header class="header fixed">
+        <nav class="">
+            <ul class="list-none flex justify-between">
+              <li><a href="https://lab2view.com/">Lab2<span class="text-main-color">View</span></a></li>
+              <li>
+                <ul class="list-none flex justify-between">
+                  <li><a href="#home">Accueil</a></li>
+                  <li><a href="#">A-propos</a></li>
+                  <li><a href="#nos-services">Nos services</a></li>
+                  <li><a href="dinoujunior7@gmail.com/ ">Contacter</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div class="absolute h-100 w-full ">
+          <img class="cover-image w-full h-100 " src="/auth_php/assets/background.png" alt="">
+        </div>
+       <div class="relative z-10 flex items-center info">
+        <section class="message-1 text-white" style="text-align: start;">
+            <h1 id="header h1" class="mb-1 font-bold shadow text-main-color">NOTRE AVENIR, C'EST L'INFORMATIQUE.</h1>
+            <p style="width: 60%;">L'informatique est le futur de notre socièté.Découvrez comment elle peut améliorer notre vie quotidienne.
+                "Lab2View est situé à Douala, Cameroun, depuis 2019. Notre siège social est implanté dans le quartier dynamique de Bonamoussadi, à proximité immédiate de l'hôtel Serena. Cette localisation stratégique nous permet d'être facilement accessibles pour nos clients et partenaires, tout en étant au cœur de l'activité économique de la ville."
+            </p>
+          </section>
+          <div class="project-logo">
+              <img style="padding-left: 100px;" src="/auth_php/assets/logo.png" alt="">
             </div>
-          </main>
-
+       </div>
+      </main>
           <!-- Nos services -->
+          <section id="nos-services" class="nos-services">
+            <h2 class="titre-section">NOS SERVICES</h2>
+            <div class="grille-services">
+              <!-- Service 1 -->
+              <div class="service">
+                <img src="/auth_php/assets/lab.jpg" alt="Service 1" class="image-service">
+                <p class="description-service">Formation en développement web pour débutants.</p>
+                <p class="cout-formation">Coût : 100 000 FCFA</p>
+              </div>
 
-          <section class="w-75 mx-auto flex justify-center items-center flex-col">
-            <h2 class="text-center">Nos services</h2>
-            <div class="w-full flex justify-center">
-              <div class="cards">
-                <img src="tiron.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 200px; height: 150px;  margin-left: 10px;">
-                <h3>Développement web </h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laboriosam, libero quibusdam fugiat rem repellat voluptas culpa magni iusto atque! In, corrupti quam velit tenetur libero vel minima! Error, consequatur. </p>
+              <!-- Service 2 -->
+              <div class="service">
+                <img src="/auth_php/assets/lab.jpg" alt="Service 2" class="image-service">
+                <p class="description-service">Formation en design graphique avancé.</p>
+                <p class="cout-formation">Coût : 150 000 FCFA</p>
               </div>
-              <div class="cards">
-                <img src="tiron.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 200px; height: 150px;  margin-left: 10px;">
-                <h3>Développement web </h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laboriosam, libero quibusdam fugiat rem repellat voluptas culpa magni iusto atque! In, corrupti quam velit tenetur libero vel minima! Error, consequatur. </p>
+
+              <!-- Service 3 -->
+              <div class="service">
+                <img src="/auth_php/assets/lab.jpg" alt="Service 3" class="image-service">
+                <p class="description-service">Formation en marketing digital.</p>
+                <p class="cout-formation">Coût : 120 000 FCFA</p>
               </div>
-              <div class="cards">
-                <img src="tiron.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 200px; height: 150px;  margin-left: 10px;">
-                <h3>Développement web </h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laboriosam, libero quibusdam fugiat rem repellat voluptas culpa magni iusto atque! In, corrupti quam velit tenetur libero vel minima! Error, consequatur. </p>
-              </div>
-              <div class="cards">
-                <img src="tiron.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 200px; height: 150px;  margin-left: 10px;">
-                <h3>Développement web </h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laboriosam, libero quibusdam fugiat rem repellat voluptas culpa magni iusto atque! In, corrupti quam velit tenetur libero vel minima! Error, consequatur. </p>
-              </div>
-              <div class="cards">
-                <img src="tiron.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 200px; height: 150px;  margin-left: 10px;">
-                <h3>Développement web </h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laboriosam, libero quibusdam fugiat rem repellat voluptas culpa magni iusto atque! In, corrupti quam velit tenetur libero vel minima! Error, consequatur. </p>
+
+              <!-- Service 4 -->
+              <div class="service">
+                <img src="/auth_php/assets/lab.jpg" alt="Service 4" class="image-service">
+                <p class="description-service">Formation en gestion de projet.</p>
+                <p class="cout-formation">Coût : 200 000 FCFA</p>
               </div>
             </div>
+        </section>
 
-          </section>
+  <!-- Section Nos Projets -->
+        <section id="nos-projets" class="section">
+          <h2>Nos Projets</h2>
+          <div class="projets-grid">
+            <div class="projet">
+              <img src="/auth_php/assets/image4.png" alt="Projet 1">
+              <h3>Projet 1</h3>
+              <p>Description du projet 1.</p>
+            </div>
+            <div class="projet">
+              <img src="/auth_php/assets/image4.png" alt="Projet 2">
+              <h3>Projet 2</h3>
+              <p>Description du projet 2.</p>
+            </div>
+            <div class="projet">
+              <img src="/auth_php/assets/image4.png" alt="Projet 3">
+              <h3>Projet 3</h3>
+              <p>Description du projet 3.</p>
+            </div>
+          </div>
+        </section>
 
-          <!-- Qui sommes nous -->
+        <!-- Section Qui Sommes-Nous ? -->
+        <section id="qui-sommes-nous" class="section">
+          <h2>Qui Sommes-Nous ?</h2>
+          <p>
+            Nous sommes une entreprise passionnée par la création de solutions innovantes.
+            Notre équipe est composée de professionnels expérimentés dans divers domaines.
+          </p>
+          <div class="equipe">
+            <div class="membre">
+              <img src="/auth_php/assets/nous.jpg" alt="Membre 1">
+              <h3>CLovis KIKAM</h3>
+              <p>CEO</p>
+            </div>
+            <div class="membre">
+              <img src="/auth_php/assets/nous.jpg" alt="Membre 2">
+              <h3>Christian OLIVIER</h3>
+              <p>CTO</p>
+            </div>
+            <div class="membre">
+              <img src="/auth_php/assets/nous.jpg" alt="Membre 3">
+              <h3>Fiona LIZA</h3>
+              <p>Designer</p>
+            </div>
+          </div>
+        </section>
 
-          <section>
+        <!-- Section FAQ -->
+        <section id="faq" class="section">
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(1)">
+              <h3>Question 1 : Quel est votre domaine d'expertise ?</h3>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="faq-answer" id="answer1" >
+              <p>Nous sommes spécialisés dans le développement web, le design et le marketing digital.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">
+              <h3>Question 2 : Comment puis-je vous contacter ?</h3>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="faq-answer" id="answer2">
+              <p>Vous pouvez nous contacter via le formulaire ci-dessous ou par email à contact@entreprise.com.</p>
+            </div>
+          </div>
+        </section>
 
-          </section>
-
-          <!-- Nos projets -->
-           <section>
-
-           </section>
+        <!-- Section Nous Contacter -->
+        <section id="nous-contacter" class="section">
+          <h2>Nous Contacter</h2>
+          <form class="contact-form">
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+          </form>
+        </section>
 
            <!-- cotactez nous -->
-            <section id="sign-in" class="flex w-75 gap-2 items-center  mx-auto">
-
-              <div class="flex-1"  style="font-weight: bold; font-size: 36px; padding-left: 48px;">Connectez-vous</div>
+            <section id="sign-in" class="section">
+              <h2>Connectez-Vous</h2>
+              <!-- <div class="flex-1"  style="font-weight: bold; font-size: 36px; padding-left: 48px;">Connectez-vous</div> -->
               <div style="padding: 20px 40px; border-radius: 20px; " class="flex-1 bg-white">
-                <form action="connexion.php" method="post">
+                <form action="connexion.php" method="post" class="contact-form">
                   <div class="flex gap-2 flex-col">
-                    <label for="email">E-mail</label>
                     <input class="field" type="email" name="email" id="email" placeholder="Votre email...">
                   </div>
                   <div class="flex-col gap-2">
-                    <label for="password">Mot de Passe</label>
                     <input class="field" type="password" name="password" placeholder="Mot de Passe">
                   </div>
                   <div>
@@ -181,6 +219,44 @@ if (!empty($_GET['error'])) {
               </div>
 
             </section>
+          <section class="trust-section">
+            <h2 class="section-title">Ils nous font confiance</h2>
+            <div class="slider">
+              <div class="slider-track">
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 1">
+                </div>
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 2">
+                </div>
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 3">
+                </div>
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 4">
+                </div>
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 5">
+                </div>
+                <!-- Dupliquez les slides pour un effet infini -->
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 1">
+                </div>
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 2">
+                </div>
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 3">
+                </div>
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 4">
+                </div>
+                <div class="slide">
+                  <img src="/auth_php/assets/NACI.jpg" alt="Logo 5">
+                </div>
+              </div>
+            </div>
+          </section>
 
             <!-- footer -->
              <footer class="w-full flex flex-col justify-center items-center gap-2">
@@ -196,97 +272,33 @@ if (!empty($_GET['error'])) {
                 <a href="">Projets</a>
                 <a href="">Temoniages</a>
               </div>
-              <p class="mt-5">Copyright2024 &copy; Tous droits réservés.</p>
+              <p class="mt-5 text-white">Copyright2024 &copy; Tous droits réservés.</p>
              </footer>
-<!-- 
-            <div style="display: flex;">
-            <section style="flex: 1;">
-                <img src="peter.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 20px;height: 20px;margin-bottom: 5px;">
-                <h2>Nos services</h2>
-                <ul>
-                    <li><a href="https://www.winpharma.com/">Développement web </a></li>
-                    <li><a href="https://www.Stackoverflow.com/">Conseils en informatique</a></li>
-                    <li><a href="https://www.coursera.org/">Formation aux nouvelles technologies</a></li>
-                </ul>
-            </section>
-            <img src="tiron.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 200px; height: 150px;  margin-left: 10px;">
-          </div>
-            <center><img src="peter.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 300px;height: 300px;margin-bottom: 5px;"></center>
-            <section>              
-            <p>Après avoir découvert nos services, nous vous invitons à explorer nos projets. Nous sommes fiers de présenter une sélection de nos réalisations les plus marquantes, qui démontrent notre expertise et notre passion pour la qualité. Nos projets sont le reflet de notre engagement à fournir des solutions innovantes et efficaces qui répondent aux besoins de nos clients."
-                Ce paragraphe a une disposition claire et logique, avec une transition naturelle entre les services et les projets. Il présente également une touche de fierté et d'engagement, ce qui peut aider à renforcer la confiance des lecteurs.</p>
-            </section>
-            <div style="display: flex;">
-            <section style="flex: 1;">
-                <img src="lab.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 20px;height: 20px;margin-bottom: 5px;">
-                <h2>Nos projets</h2>
-                <ul>
-                    <li><a href="https://www.Lab2view.com/">Création d'un site web pour une entreprise locale</a></li>
-                    <li><a href="https://www.ReactNative.com/">Développement d'une application mobile pour les étudiants</a></li>
-                    <li><a href="https://www.Airtable.com/">Conception d'un système de gestion de données pour une association</a></li>
-                </ul>
-            </section>
-            <img src="telegram.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 200px; height: 150px;  margin-left: 10px;">
-          </div>
-        </main>
-        <center>
-        <img src="lab.jpg" title="l'informatique est le futur de notre socièté" alt="l'informatique est le futur de notre socièté" style="width: 300px;height: 300px;margin-bottom: 5px";></center>
- <br><center> <button class="btn-email"><i>CONTACTEZ-NOUS</i></button></center>
 
-        <button type="submit" id="envoyer">Envoyer</button>
-      </form> <form id="formation-form">
-        <fieldset>
-          <legend>Informations personnelles</legend>
-          <div class="champ">
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" placeholder="Mbappe" name="nom" required>
-          </div>
-          <div class="champ">
-            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" placeholder="clovis" name="prenom" required>
-          </div>
-          <div class="champ">
-            <label for="email">Email :</label>
-            <input type="email" id="email" placeholder="dinoujunior7@gmail.com" name="email" required>
-          </div>
-          <div class="champ">
-            <label for="telephone">Téléphone :</label>
-            <input type="tel" id="telephone" placeholder="+237 699 38 36 96" name="telephone" required>
-          </div>
-          <div class="champ">
-            <label for="entreprise">Entreprise :</label>
-            <input type="text" id="entreprise" placeholder="lab2view" name="entreprise" required>
-          </div>
-          <div class="champ">
-            <label for="formation">Formation :</label>
-            <select id="formation" name="formation" required>
-              <option value="">Sélectionnez</option>
-              <option value="developpement-web" selected>Développement Web</option>
-              <option value="developpement-mobile">Développement Mobile</option>
-              <option value="reseaux-informatiques">Réseaux Informatiques</option>
-            </select>
-          </div>
-        </fieldset>
-            <div class="conteneur-videos">
-            <video class="video"  title="l'informatique est le futur de notre socièté" src="messi.mp4" controls>profitez au maximun.</video>
-            <video  class="video"  title="l'informatique est le futur de notre socièté" src="cr7.mp4" controls >profitez au maximun.</video>
-          </div>
-          <br><br>
-          <center> <button class="btn-chi-siamo"><i>NOS PROJETS!</i></button></center><br>
-          <div class="container">
-            <div class="slider">
-            <img src="image1.png" class="image" alt="Image 1">
-            <img src="image2.png" class="image" alt="Image 2">
-            <img src="image3.png" class="image" alt="Image 3">
-            <img src="image4.png" class="image" alt="Image 4">
-            </div>
-          </div>          
-          <center>
-          <a href="https://www.youtube.com/watch?v=j8-f9KjGtJY&list=PLbMYgBdxxW9OLCqqdbVlhDAdz76djzLZ9" title="l'informatique est le futur de notre socièté">DEVENEZ DISIGNER WEB SANS DIPLOMES.</a>
-        </center><br><br>
-            <footer>
-            <p>Copyright2024.© Tous droits réservés.Notre Avenir C'est L'Informatique.</p>
-        </footer> -->
-        <script src="script.js"></script>
+        <script >
+          // Fonction pour afficher/masquer les réponses de la FAQ
+            function toggleAnswer(id) {
+              const answer = document.getElementById(`answer${id}`);
+              const arrow = answer.previousElementSibling.querySelector('.arrow');
+              if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                arrow.textContent = '▼';
+              } else {
+                answer.style.display = 'block';
+                arrow.textContent = '▲';
+              }
+            }
+
+          // Optionnel : Ajouter des contrôles pour le slider (pause au survol)
+          const sliderTrack = document.querySelector('.slider-track');
+
+          sliderTrack.addEventListener('mouseenter', () => {
+            sliderTrack.style.animationPlayState = 'paused';
+          });
+
+          sliderTrack.addEventListener('mouseleave', () => {
+            sliderTrack.style.animationPlayState = 'running';
+          });
+        </script>
     </body>
 </html>
