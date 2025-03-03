@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .tab-button.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  .tab-button:hover {
+    background: #0056b3;
+    color: white;
+  }
+  
+  /* Tab Content */
+  .tab-pane {
+    display: none;
+  }
+  
+  .tab-pane.active {
+    display: block;
+  }
+  
+  /* Profile Tab */
+  #profile p {
+    margin: 10px 0;
+  }
+  
+  /* Edit Profile Tab */
+  #edit-profile-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #edit-profile-form label {
+    margin-top: 10px;
+  }
+  
+  #edit-profile-form input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #edit-profile-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #edit-profile-form button:hover {
+    background: #0056b3;
+  }
+  
+  /* Messages Tab */
+  .messages-list {
+    margin-top: 10px;
+  }
+  
+  .message {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .message p {
+    margin: 5px 0;
+  }
