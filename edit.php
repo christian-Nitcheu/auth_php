@@ -103,6 +103,7 @@ if(isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <section style="" class="flex flex-col w-75 gap-2 items-center mx-auto bg-white rounded-sm">
@@ -157,7 +158,7 @@ if(isset($_SESSION['id'])){
                     </div>
                 </div>
                 <div class="gap-2">
-                    <input class="submit" name="submit" type="submit" value="S'inscrire">
+                    <input class="submit" name="submit" type="submit" value="Enregistrer">
                 </div>
             </form>
             <?php echo isset($existing_user) ? "<h3 style='text-align: center; color: red'> $existing_user</h3>" : ""; ?>

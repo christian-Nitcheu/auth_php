@@ -143,7 +143,7 @@ function displayErrors($errors) {
 
         <meta property="og:url" content="https://www.informatique-notre-avenir.com/fr_fr/informatique/site-web">
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/css/style.css">
 
     </head>
     <body style="margin-bottom: 0px;" class="bg-black text-white">
