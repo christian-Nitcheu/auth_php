@@ -1,3 +1,28 @@
+
+<?php
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$db_connection = new PDO('mysql:host=localhost;dbname=auth_system', 'todo','todo');
+
+
+if (isset($_SESSION['id'])) {
+    $getid = intval($_GET['id']);
+    $requser = $db_connection->prepare("SELECT * FROM users WHERE id = ?");
+    $requser->execute(array($getid));
+    $user_info = $requser->fetch();
+
+    $user_info['email'];
+    $user_info['password'];
+    $user_info['firstname'];
+    $user_info['lastname'];
+    $user_info['telephone'];
+
+    $comments = $db_connection->prepare("SELECT * FROM comments");
+    $comments_answer= $comments->execute();
+         
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,26 +33,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header fixed">
+  <header class="header fixed">
         <nav class="">
             <ul class="list-none flex justify-between">
               <li><a href="https://lab2view.com/">Lab2<span class="text-main-color">View</span></a></li>
               <li>
                 <ul class="list-none flex justify-between">
-                  <li><a href="#home">Accueil</a></li>
-                  <li><a href="#">A-propos</a></li>
-                  <li><a href="#nos-services">Nos services</a></li>
-                  <li><a href="dinoujunior7@gmail.com/ ">Contacter</a></li>
+                  <li><a href="index.php#home">Accueil</a></li>
+                  <li><a href=<?php echo "edit.php?id=".$_SESSION['id'] ?>> Mon Profil</a></li>
+                  <li><a href="logout.php">Deconnexion</a></li>
                 </ul>
               </li>
             </ul>
           </nav>
-        </header>
+    </header>
   <div class="container">
     <!-- Tabs -->
     <div class="tabs">
       <button class="tab-button active" data-tab="profile">Profil</button>
-      <button class="tab-button" data-tab="edit-profile">Modifier le Profil</button>
       <button class="tab-button" data-tab="messages">Messages</button>
       <button class="tab-button" data-tab="settings">Paramètres</button>
     </div>
@@ -37,34 +60,24 @@
       <!-- Profile Tab -->
       <div id="profile" class="tab-pane active">
         <h2>Profil</h2>
-        <p><strong>Nom :</strong> <span id="profile-name">John Doe</span></p>
-        <p><strong>Email :</strong> <span id="profile-email">john.doe@example.com</span></p>
-      </div>
+        <p><strong>Nom :</strong> <span id="profile-name"><?php echo $user_info['firstname']. " " .$user_info['lastname']; ?></span></p>
+        <p><strong>Email :</strong> <span id="profile-email"><?php echo $user_info['email']; ?></span></p>
+        <p><strong>Telephone :</strong> <span id="profile-telephone"><?php echo $user_info['telephone']; ?></span></p>
 
-      <!-- Edit Profile Tab -->
-      <div id="edit-profile" class="tab-pane">
-        <h2>Modifier le Profil</h2>
-        <form id="edit-profile-form">
-          <label for="name">Nom :</label>
-          <input type="text" id="name" name="name" value="John Doe" required>
-          <label for="email">Email :</label>
-          <input type="email" id="email" name="email" value="john.doe@example.com" required>
-          <button type="submit">Enregistrer</button>
-        </form>
       </div>
 
       <!-- Messages Tab -->
       <div id="messages" class="tab-pane">
         <h2>Messages</h2>
+        <?php 
+          foreach($comments as $comment){
+        ?>
         <div class="messages-list">
           <div class="message">
-            <p><strong>De :</strong> alice@example.com</p>
-            <p>Bonjour, comment ça va ?</p>
+            <p><strong>De :</strong> <?php echo $comment['user_id']; ?></p>
+            <p><?php echo $comment['comment']; ?></p>
           </div>
-          <div class="message">
-            <p><strong>De :</strong> bob@example.com</p>
-            <p>Salut, tu as reçu mon fichier ?</p>
-          </div>
+          <?php } ?>
         </div>
       </div>
 
@@ -112,5 +125,21 @@
         });
         });
   </script>
-</body>
+  </body>
+<?php }else {
+    $error_msg = "Vous devez vous connecter pour accéder à cette page.";
+    header("Location: index.php?error=" . urlencode($error_msg));
+} ?>
+<script>
+
+    let full = document.getElementById("full");
+    let empty = document.getElementById("empty");
+
+    console.log(full);
+    console.log(empty);
+    function toggleFavorite(e) {
+        full.classList.toggle("hidden");
+        empty.classList.toggle("hidden");
+    }
+</script>
 </html>

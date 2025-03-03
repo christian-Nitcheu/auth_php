@@ -103,10 +103,25 @@ if(isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section style="" class="flex flex-col w-75 gap-2 items-center mx-auto bg-white rounded-sm">
+<header class="header fixed">
+        <nav class="">
+            <ul class="list-none flex justify-between">
+              <li><a href="https://lab2view.com/">Lab2<span class="text-main-color">View</span></a></li>
+              <li>
+                <ul class="list-none flex justify-between">
+                  <li><a href="index.php#home">Accueil</a></li>
+                  <li><a href=<?php echo "edit.php?id=".$_SESSION['id'] ?>> Mon Profil</a></li>
+                  <li><a href="logout.php">Deconnexion</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+    </header>
+
+<section style="margin-top:120px" class="flex flex-col w-75 gap-2 items-center mx-auto bg-white rounded-sm">
               <div class="flex-1"  style="font-weight: bold; font-size: 36px; padding-left: 48px; color: black;">Editer le profil de <?php echo $user_info['firstname']. " " .$user_info['lastname']; ?></div>
               <div style="padding: 20px 40px; border-radius: 20px; width: 100%;" class="flex-1 bg-white">
               <form action="" method="post">
@@ -164,11 +179,8 @@ if(isset($_SESSION['id'])){
             <?php echo isset($existing_user) ? "<h3 style='text-align: center; color: red'> $existing_user</h3>" : ""; ?>
               </div>
 
-            </section>
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="file" name="image">
-        <input type="submit" name="submit">
-    </form>
+    </section>
+
     <footer class="w-full flex flex-col justify-center items-center gap-2">
               <div class="inline-flex mt-5 mb-5 gap-5">
                 <a href="" class="w-11 h-11 bg-transparent rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="p-1 w-11 h-11" viewBox="0 0 24 24" ><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg></a>
@@ -182,7 +194,7 @@ if(isset($_SESSION['id'])){
                 <a href="">Projets</a>
                 <a href="">Temoniages</a>
               </div>
-              <p class="mt-5">Copyright2024 &copy; Tous droits réservés.</p>
+              <p class="mt-5 text-white">Copyright2024 &copy; Tous droits réservés.</p>
     </footer>
 </body>
 </html>

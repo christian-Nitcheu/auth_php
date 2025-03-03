@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
         if ($user_exist == 1) {
             $user_info = $login->fetch();
             $_SESSION['id'] = $user_info['id'];
-            header("Location: login_index.php?id=".$_SESSION['id']);
+            header("Location: profil.php?id=".$_SESSION['id']);
         }
         else {
             echo "Email ou mot de passe incorrect";
